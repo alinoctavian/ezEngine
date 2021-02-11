@@ -1,0 +1,18 @@
+<rml>
+    <head>
+        <title>Hello world</title>
+
+        <style>
+            body
+            {
+                width: 200px;
+                height: 100px;
+                margin: auto;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Hello WOrld</p>
+    </body>
+    </rml>

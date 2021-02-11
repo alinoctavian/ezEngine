@@ -18,15 +18,15 @@ Plugin
 }
 Plugin
 {
-	string %Path{"ezEnginePluginPhysX"}
-	bool %LoadCopy{false}
-	string %DependencyOf{"EditorPluginPhysX"}
-}
-Plugin
-{
 	string %Path{"ezEnginePluginRecast"}
 	bool %LoadCopy{false}
 	string %DependencyOf{"EditorPluginRecast"}
+}
+Plugin
+{
+	string %Path{"ezEnginePluginRmlUi"}
+	bool %LoadCopy{false}
+	string %DependencyOf{"EditorPluginRmlUi"}
 }
 Plugin
 {
@@ -54,12 +54,6 @@ Plugin
 }
 Plugin
 {
-	string %Path{"ezPhysXPlugin"}
-	bool %LoadCopy{false}
-	string %DependencyOf{"EditorPluginPhysX"}
-}
-Plugin
-{
 	string %Path{"ezProcGenPlugin"}
 	bool %LoadCopy{false}
 	string %DependencyOf{"EditorPluginProcGen"}
@@ -69,6 +63,12 @@ Plugin
 	string %Path{"ezRecastPlugin"}
 	bool %LoadCopy{false}
 	string %DependencyOf{"EditorPluginRecast"}
+}
+Plugin
+{
+	string %Path{"ezRmlUiPlugin"}
+	bool %LoadCopy{false}
+	string %DependencyOf{"EditorPluginRmlUi"}
 }
 Plugin
 {

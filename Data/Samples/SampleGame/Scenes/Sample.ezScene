@@ -11,7 +11,7 @@ o
 		s %AssetType{"Scene"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{10991936023139991684,4849455965415217685}}
-		u4 %Hash{5910188401091215619}
+		u4 %Hash{6070758631536695621}
 		VarArray %MetaInfo{}
 		VarArray %Outputs{}
 		VarArray %References
@@ -329,12 +329,16 @@ o
 {
 	Uuid %id{u4{5228735049174813087,5095267275090245862}}
 	s %t{"ezColorAnimationComponent"}
-	u3 %v{1}
+	u3 %v{2}
 	p
 	{
 		b %Active{1}
+		s %AnimationMode{"ezPropertyAnimMode::Loop"}
+		b %ApplyToChildren{0}
 		Time %Duration{d{0x0000000000001440}}
 		s %Gradient{"{ b783b641-7f90-4f2a-bcb5-b1472c9c7b88 }"}
+		b %RandomStartOffset{1}
+		s %SetColorMode{"ezSetColorMode::SetRGBA"}
 	}
 }
 o
@@ -479,11 +483,11 @@ o
 		u3 %Detail{16}
 		s %Material{""}
 		s %Shape{"ezGreyBoxShape::Box"}
-		f %SizeNegX{0x0000A040}
-		f %SizeNegY{0x0000A040}
+		f %SizeNegX{0x14AEBF40}
+		f %SizeNegY{0xC3F5C040}
 		f %SizeNegZ{0}
-		f %SizePosX{0x0000A040}
-		f %SizePosY{0x0000A040}
+		f %SizePosX{0x6666AE40}
+		f %SizePosY{0x0000A840}
 		f %SizePosZ{0x0000003F}
 		b %SlopedBottom{0}
 		b %SlopedTop{0}
@@ -853,6 +857,34 @@ Types
 {
 o
 {
+	Uuid %id{u4{16720880221672408456,40870904060659836}}
+	s %t{"ezReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{14281040457857289867,14417512028859177400}}
+			Uuid{u4{12081655088071859725,8450557602916398192}}
+		}
+		s %Category{"ezPropertyCategory::Member"}
+		s %Flags{"ezPropertyFlags::StandardType|ezPropertyFlags::Phantom"}
+		s %Name{"Size"}
+		s %Type{"float"}
+	}
+}
+o
+{
+	Uuid %id{u4{9307616656214398778,74060862440038773}}
+	s %t{"ezCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"SampleGamePlugin"}
+	}
+}
+o
+{
 	Uuid %id{u4{103559400241636698,859854814410446625}}
 	s %t{"ezReflectedPropertyDescriptor"}
 	u3 %v{2}
@@ -900,6 +932,16 @@ o
 		s %TypeName{"ezGreyBoxShape"}
 		u3 %TypeSize{1}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7749830134052052980,2843098144130278103}}
+	s %t{"ezDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Value{1}
 	}
 }
 o
@@ -976,6 +1018,16 @@ o
 }
 o
 {
+	Uuid %id{u4{15888252611835743955,3582417219221167196}}
+	s %t{"ezDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		Color %Value{f{0x0000803F,0x0000803F,0x0000803F,0x0000803F}}
+	}
+}
+o
+{
 	Uuid %id{u4{12988416931910697783,3614107907594852236}}
 	s %t{"ezReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1010,6 +1062,41 @@ o
 	p
 	{
 		s %Category{"SampleGamePlugin"}
+	}
+}
+o
+{
+	Uuid %id{u4{18149302814084835841,4763915274322063185}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::IsEnum|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezEnumBase"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezSetColorMode"}
+		u3 %TypeSize{1}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{11803852108711123233,5305461344424444403}}
+	s %t{"ezReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{7749830134052052980,2843098144130278103}}
+		}
+		s %Category{"ezPropertyCategory::Member"}
+		s %Flags{"ezPropertyFlags::Bitflags|ezPropertyFlags::Phantom"}
+		s %Name{"Render"}
+		s %Type{"DebugRenderComponentMask"}
 	}
 }
 o
@@ -1092,7 +1179,7 @@ o
 		s %PluginName{"Static"}
 		VarArray %Properties{}
 		s %TypeName{"ezGameObject"}
-		u3 %TypeSize{168}
+		u3 %TypeSize{128}
 		u3 %TypeVersion{1}
 	}
 }
@@ -1196,6 +1283,34 @@ o
 }
 o
 {
+	Uuid %id{u4{7768413804913695997,8445575526993733033}}
+	s %t{"ezReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{6518540739189211375,16872784960888653386}}
+		}
+		s %Category{"ezPropertyCategory::Member"}
+		s %Flags{"ezPropertyFlags::StandardType|ezPropertyFlags::Const|ezPropertyFlags::Phantom"}
+		s %Name{"Texture"}
+		s %Type{"ezConstCharPtr"}
+	}
+}
+o
+{
+	Uuid %id{u4{12081655088071859725,8450557602916398192}}
+	s %t{"ezClampValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Max{10}
+		i3 %Min{0}
+	}
+}
+o
+{
 	Uuid %id{u4{6089094783765586323,8705960867921430659}}
 	s %t{"ezReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -1287,7 +1402,7 @@ o
 		s %PluginName{"Static"}
 		VarArray %Properties{}
 		s %TypeName{"ezCameraComponent"}
-		u3 %TypeSize{552}
+		u3 %TypeSize{504}
 		u3 %TypeVersion{9}
 	}
 }
@@ -1503,12 +1618,21 @@ o
 	u3 %v{1}
 	p
 	{
-		VarArray %Attributes{}
-		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Attributes
+		{
+			Uuid{u4{9307616656214398778,74060862440038773}}
+		}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Phantom"}
 		VarArray %Functions{}
 		s %ParentTypeName{"ezComponent"}
 		s %PluginName{"ezSampleGamePlugin"}
-		VarArray %Properties{}
+		VarArray %Properties
+		{
+			Uuid{u4{16720880221672408456,40870904060659836}}
+			Uuid{u4{17062947581615586833,17705268212450683399}}
+			Uuid{u4{7768413804913695997,8445575526993733033}}
+			Uuid{u4{11803852108711123233,5305461344424444403}}
+		}
 		s %TypeName{"DebugRenderComponent"}
 		u3 %TypeSize{80}
 		u3 %TypeVersion{2}
@@ -1530,6 +1654,16 @@ o
 		s %Flags{"ezPropertyFlags::StandardType|ezPropertyFlags::Phantom"}
 		s %Name{"Amplitude"}
 		s %Type{"float"}
+	}
+}
+o
+{
+	Uuid %id{u4{14281040457857289867,14417512028859177400}}
+	s %t{"ezDefaultValueAttribute"}
+	u3 %v{1}
+	p
+	{
+		i3 %Value{1}
 	}
 }
 o
@@ -1636,8 +1770,8 @@ o
 		s %PluginName{"Static"}
 		VarArray %Properties{}
 		s %TypeName{"ezColorAnimationComponent"}
-		u3 %TypeSize{72}
-		u3 %TypeVersion{1}
+		u3 %TypeSize{80}
+		u3 %TypeVersion{2}
 	}
 }
 o
@@ -1656,6 +1790,16 @@ o
 		s %TypeName{"ezRotorComponent"}
 		u3 %TypeSize{112}
 		u3 %TypeVersion{3}
+	}
+}
+o
+{
+	Uuid %id{u4{6518540739189211375,16872784960888653386}}
+	s %t{"ezAssetBrowserAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Filter{";Texture 2D;"}
 	}
 }
 o
@@ -1741,6 +1885,23 @@ o
 		s %TypeName{"SendMsgComponent"}
 		u3 %TypeSize{80}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{17062947581615586833,17705268212450683399}}
+	s %t{"ezReflectedPropertyDescriptor"}
+	u3 %v{2}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{15888252611835743955,3582417219221167196}}
+		}
+		s %Category{"ezPropertyCategory::Member"}
+		s %Flags{"ezPropertyFlags::StandardType|ezPropertyFlags::Phantom"}
+		s %Name{"Color"}
+		s %Type{"ezColor"}
 	}
 }
 o
